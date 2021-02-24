@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Launcher Restarter</string>
+    <string name="LEGACY_LAUNCHER_PACKAGE_ID">fm.brandtrack.launcherdm</string>
+    <string name="LAUNCHER_PACKAGE_ID">fm.brandtrack.launcherdm</string>
+
+
+</resources>

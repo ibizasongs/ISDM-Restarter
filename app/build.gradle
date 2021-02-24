@@ -8,16 +8,24 @@ android {
             storeFile file('keystore/keystore.jks')
             storePassword '0N7mi7EcyQ'
         }
+        debug {
+            storeFile file('keystore/keystore.jks')
+            storePassword '0N7mi7EcyQ'
+            keyAlias 'key'
+            keyPassword '0N7mi7EcyQ'
+        }
     }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.ibizasongs.launcherrestarter"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 4
         versionName "1.04"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,8 +35,36 @@ android {
         debug {
             signingConfig signingConfigs.config
         }
+
+
     }
+    flavorDimensions "All"
+
+    productFlavors {
+        // IbizaSongs Master build variant
+        ISmaster {
+            applicationId "com.ibizasongs.launchertv"
+
+
+        }
+        // Brandtrack Master build variant
+        BtMaster {
+            applicationId "com.brandtrack.launchertv"
+
+
+        }
+    }
+    sourceSets {
+        BtMaster {
+            java {
+                srcDirs 'src/BtMaster/java'
+            }
+        }
+    }
+
+
 }
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

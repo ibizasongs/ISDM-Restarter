@@ -1,4 +1,4 @@
-package com.ibizasongs.launcherrestarter;
+package launcherrestarter;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -11,8 +11,8 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
     private final String LOG_TAG = "LauncherRestarter";
-    private final String LEGACY_LAUNCHER_PACKAGE_ID = "com.ibizasongs.launcherdm";
-    private final String LAUNCHER_PACKAGE_ID = "com.ibizasongs.launcherdm";
+    private final String LEGACY_LAUNCHER_PACKAGE_ID = "fm.brandtrack.launcherdm";
+    private final String LAUNCHER_PACKAGE_ID = "fm.brandtrack.launcherdm";
     private int restartAttempts = 60;
     private final String LAUNCHER_OLD_VERSION = "oldVersion";
     private String oldLauncherVersion;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                Log.i(LOG_TAG, "Starting IbizaSongsDM Launcher!");
+                Log.i(LOG_TAG, "Starting BrandtrackDM Launcher!");
                 startActivity(intent);
             }
         };

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Launcher Restarter</string>
+    <string name="LEGACY_LAUNCHER_PACKAGE_ID">com.ibizasongs.launcherdm</string>
+    <string name="LAUNCHER_PACKAGE_ID">com.ibizasongs.launcherdm</string>
 </resources>
